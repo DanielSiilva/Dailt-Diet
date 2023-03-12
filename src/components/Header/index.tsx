@@ -1,10 +1,14 @@
-import {Text} from 'react-native'
+import LogoImg from '@assets/logo.png'
+import ProfileImg from '@assets/profile.png'
+
+import {Container, Logo, Profile} from './styles'
 
 export function Header (){
 
     return (
-        <Text>
-            Aqui header
-        </Text>
+        <Container>
+            <Logo source={LogoImg}/>
+            <Profile  source={ProfileImg}/>
+        </Container>
     )
 }
