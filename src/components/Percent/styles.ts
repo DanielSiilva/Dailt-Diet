@@ -6,11 +6,8 @@ import styled, {css} from "styled-components/native";
 export const Container = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: center;
-
     padding: 16px 16px;
-   
     height: 115px;
-    top: 30px;
     
     background: ${({theme}) => theme.COLORS.GREEN_LIGHT};
     border-radius: 8px;
@@ -39,7 +36,6 @@ export const TextContent = styled.Text`
 
 `
 export const ContainerPercent = styled.View`
-
     justify-content: center;
     align-items: center;
 

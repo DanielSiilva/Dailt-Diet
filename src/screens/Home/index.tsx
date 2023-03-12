@@ -1,8 +1,10 @@
 import { Header } from '@components/Header'
 import { Percent } from '@components/Percent'
 
+import {View, Text} from 'react-native'
 
-import {Container} from './styles'
+
+import {Container, Content, NewMeal, Title} from './styles'
 
 
 export function Home (){
@@ -14,6 +16,12 @@ export function Home (){
         <Container>
             <Header />
             <Percent />
+
+            <Content>
+                <NewMeal>
+                    <Title>Refeições</Title>
+                </NewMeal>
+            </Content>
         </Container>
     )
 }
