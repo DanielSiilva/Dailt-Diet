@@ -1,5 +1,5 @@
 import {ThemeProvider} from 'styled-components/native'
-import {StatusBar, Text} from 'react-native'
+import {StatusBar} from 'react-native'
 
 import theme from './src/theme';
 
@@ -8,6 +8,7 @@ import {useFonts, NunitoSans_400Regular, NunitoSans_700Bold} from '@expo-google-
 
 
 import {Routes} from './src/routes'
+import { Loading } from '@components/Loading';
 
 
 
@@ -26,7 +27,7 @@ export default function App() {
         translucent
       
       />
-      {fontsLoaded? <Routes />: <Text>Falha ao carregar</Text>}
+      {fontsLoaded? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
