@@ -1,4 +1,5 @@
 import { Header } from '@components/Header'
+import { Percent } from '@components/Percent'
 
 
 import {Container} from './styles'
@@ -12,6 +13,7 @@ export function Home (){
 
         <Container>
             <Header />
+            <Percent />
         </Container>
     )
 }
