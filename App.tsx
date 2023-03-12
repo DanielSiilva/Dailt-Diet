@@ -5,14 +5,15 @@ import theme from './src/theme';
 
 import {useFonts, NunitoSans_400Regular, NunitoSans_700Bold} from '@expo-google-fonts/nunito-sans'
 
-import { Home } from './src/screens/Home';
 
 
+import {Routes} from './src/routes'
 
 
 
 
 export default function App() {
+
   const [fontsLoaded] = useFonts({
     NunitoSans_400Regular, NunitoSans_700Bold
   });
@@ -25,7 +26,7 @@ export default function App() {
         translucent
       
       />
-      {fontsLoaded? <Home />: <Text>Falha ao carregar</Text>}
+      {fontsLoaded? <Routes />: <Text>Falha ao carregar</Text>}
     </ThemeProvider>
   );
 }
