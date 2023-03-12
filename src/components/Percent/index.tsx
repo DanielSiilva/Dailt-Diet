@@ -1,6 +1,6 @@
 
 import { View } from 'react-native'
-import {Container, TextContent, TextPercent, Icon} from './styles'
+import {Container, TextContent, TextPercent, ContainerPercent, Icon} from './styles'
 
 
 export function Percent(){
@@ -8,11 +8,12 @@ export function Percent(){
 
     return (
         <Container>
-            <TextPercent>90,86%</TextPercent>
-            <TextContent>das refeições dentro da dieta</TextContent>
-          <View>
+            <ContainerPercent>
+                <TextPercent>90,86%</TextPercent>
+                <TextContent>das refeições dentro da dieta</TextContent>
+            </ContainerPercent>
+
             <Icon />
-          </View>
         </Container>
     )
 }

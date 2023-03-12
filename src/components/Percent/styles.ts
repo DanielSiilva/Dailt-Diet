@@ -1,14 +1,14 @@
-import { UsersThree } from "phosphor-react-native";
+import { ArrowUpRight } from "phosphor-react-native";
 import styled, {css} from "styled-components/native";
 
 
-export const Container = styled.View`
-    justify-content: center;
-    align-items: center;
 
-    padding: 20px 16px;
-    gap: 2px;
-    
+export const Container = styled.TouchableOpacity`
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 16px 16px;
+   
     height: 115px;
     top: 30px;
     
@@ -38,10 +38,20 @@ export const TextContent = styled.Text`
     `}
 
 `
+export const ContainerPercent = styled.View`
 
-export const Icon = styled(UsersThree).attrs(({theme}) =>({
+    justify-content: center;
+    align-items: center;
+
+`
+export const Icon = styled(ArrowUpRight).attrs(({theme}) =>({
+    size: 24,
+    color: theme.COLORS.GREEN_DARK,
 
 }))`
-
-
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    top: 8px;
 `
