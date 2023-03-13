@@ -5,6 +5,24 @@ import { ButtonNewMel } from '@components/ButtonNewMel'
 
 import {Container, Content, NewMeal, Title} from './styles'
 
+/* 
+    //Data : data => string (ordenar )
+    // Hora : data => string
+    // Title : string
+    // dentro da dienta: bollean
+*/
+
+/* 
+   Data: [ hora, title, dentro da dienta ]
+*/
+
+
+
+type Ola = {
+
+}
+
+
 
 export function Home (){
 
@@ -19,11 +37,12 @@ export function Home (){
             <Content>
                 <NewMeal>
                     <Title>Refeições</Title>
-                    
                     <ButtonNewMel 
                         name='Nova refeição'
                     />
                 </NewMeal>
+
+
             </Content>
         </Container>
     )
