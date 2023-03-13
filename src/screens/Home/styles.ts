@@ -10,23 +10,20 @@ export const Container = styled(SafeAreaView)`
     color: ${({theme}) => theme.COLORS.GRAY_1};
 
     padding: 0px 30px;
-    gap: 50px;
+    gap: 40px;
 `
 export const Content = styled.View`
     flex: 1;
     
-
 `
 
 export const NewMeal = styled.View`
-
-    border: 1px solid red;
-
+    gap:10px;
     width: 100%;
-    height: 90px;
+    height: 100px;
+
 `
 export const Title = styled.Text`
-   
    
    ${({theme}) => css`
         color: ${theme.COLORS.GRAY_1};
