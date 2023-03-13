@@ -1,25 +1,17 @@
 import {View, Text} from 'react-native'
 
-type MealCardTypeStyleProps = 'PRIMARY' | 'SECONDARY';
+import {Container, MelContainer} from './styles'
 
-interface Props {
-  type: MealCardTypeStyleProps;
-}
 
-interface MealCardProps {
-  name: string;
-  hour: string;
-  type: MealCardTypeStyleProps;
-}
 
-export function MelCard ({hour, name, type}:MealCardProps){
+export function MelCard (){
 
      return (
-        <View>
-            <Text>{hour}</Text>
+        <Container>
+            <Text>Ola</Text>
             <View>
-                <Text>{name}</Text>
+                <Text></Text>
             </View>
-        </View>
+        </Container>
      )
 }

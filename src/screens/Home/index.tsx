@@ -40,19 +40,8 @@ export function Home (){
                     />
                 </NewMeal>
                 {/* FlatList ou SectionList */}
-                <FlatList 
-                    data={dietList}
-                    keyExtractor={item => item.date}
-                    renderItem={({item}) => (
-                        <MelCard 
-                            name={'Feijão'}
-                            hour={'20hr'}
-                            type={'PRIMARY'}
-                        />
-                    )}
-
                 
-                />
+                <MelCard />
 
             </Content>
         </Container>
