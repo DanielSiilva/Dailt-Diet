@@ -1,15 +1,13 @@
-export type TypeMealStyleProps = 'PRIMARY' | 'SECONDARY';
-
-export interface MealProps {
-  id: string;
-  hour: string;
+export type MealGroupProps = {
   date: string;
+  meals: MealProps[];
+};
+
+export type MealProps = {
   name: string;
   description: string;
-  type: TypeMealStyleProps;
-}
-
-export interface DietListProps {
   date: string;
-  data: MealProps[];
-}
+  time: string;
+  id: string | number[];
+  isInDiet: boolean;
+};
