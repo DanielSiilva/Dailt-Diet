@@ -1,7 +1,3 @@
-export type MealGroupProps = {
-  date: string;
-  meals: MealProps[];
-};
 
 export type MealProps = {
   name: string;
@@ -10,4 +6,9 @@ export type MealProps = {
   time: string;
   id: string | number[];
   isInDiet: boolean;
+};
+
+export type MealGroupProps = {
+  date: string;
+  meals: MealProps[];
 };
