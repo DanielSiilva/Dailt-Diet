@@ -1,4 +1,8 @@
-import {Container,Title, Icon} from './styles'
+import {
+    Container,
+    Title, 
+    Icon
+} from './styles'
 
 
 type Props = {

@@ -16,11 +16,13 @@ export const Container = styled(TouchableOpacity)`
     background: ${({theme}) => theme.COLORS.GRAY_2};
     border-radius: 6px; 
 
-`
+`;
+
 export const Icon = styled(Plus).attrs(({theme}) =>({
     color: theme.COLORS.WHITE,
     size:18
-}))``
+}))`
+`;
 
 
 
@@ -31,4 +33,5 @@ export const Title = styled.Text`
         font-family: ${theme.FONT_FAMILY.BOLD};
         font-size: ${theme.FONT_SIZE.MD}px;
     `}
-`
+    
+`;
