@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {FlatList} from 'react-native'
 
-import {DietListProps} from '@storage/diets/DietStorageDTO'
+
 
 import { Header } from '@components/Header'
 import { Percent } from '@components/Percent'
@@ -23,7 +23,7 @@ import { MelCard } from '@components/MealCard'
 */
 
 export function Home (){
-    const [dietList, setDietList] = useState<DietListProps[]>([])
+    const [dietList, setDietList] = useState()
 
 
     return(
@@ -36,7 +36,8 @@ export function Home (){
                 <NewMeal>
                     <Title>Refeições</Title>
                     <ButtonNewMel 
-                        name='Nova refeição'
+                        title='Nova refeição'
+                        icon = 'plus'
                     />
                 </NewMeal>
                 {/* FlatList ou SectionList */}

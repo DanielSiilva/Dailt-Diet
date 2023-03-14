@@ -1,37 +1,54 @@
-import {TouchableOpacity} from 'react-native'
-import {Plus} from 'phosphor-react-native'
-import styled, {css} from "styled-components/native";
+import { TouchableOpacity } from "react-native";
+import styled, { css } from "styled-components/native";
 
+import { Trash, PencilLine, Plus } from "phosphor-react-native";
 
-export const Container = styled(TouchableOpacity)`
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 24px;
-    gap: 12px;
+export type ButtonTypeStyleProps = "primary" | "secondary";
 
-    width: 100%;
-    height: 65px;
+type Props = {
+  type: ButtonTypeStyleProps;
+};
 
-    background: ${({theme}) => theme.COLORS.GRAY_2};
-    border-radius: 6px; 
+export const Container = styled(TouchableOpacity)<Props>`
+  flex: 1;
+  min-height: 50px;
+  max-height: 50px;
 
+  background-color: ${({ theme, type }) =>
+    type === "primary" ? theme.COLORS.GRAY_1 : theme.COLORS.GRAY_7};
+  
+  color: ${({ theme, type }) =>
+    type === "primary" ? theme.COLORS.GRAY_7 : theme.COLORS.GRAY_1};
+
+  border-radius: 6px;
+  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_1};
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 `;
-
-export const Icon = styled(Plus).attrs(({theme}) =>({
-    color: theme.COLORS.WHITE,
-    size:18
-}))`
-`;
-
-
 
 export const Title = styled.Text`
+  text-align: center;
 
-    ${({theme}) => css`
-        color: ${theme.COLORS.WHITE};
-        font-family: ${theme.FONT_FAMILY.BOLD};
-        font-size: ${theme.FONT_SIZE.MD}px;
-    `}
-    
+  ${({ theme }) => css`
+    font-size: ${theme.FONT_SIZE.MD};
+    color: ${theme.COLORS.WHITE};
+    font-family: ${theme.FONT_FAMILY.BOLD};
+    margin-left: 10px;
+  `};
 `;
+
+export const TrashIcon = styled(Trash).attrs(({ theme }) => ({
+  size: 22,
+}))``;
+
+
+export const PencilIcon = styled(PencilLine).attrs(({ theme }) => ({
+  size: 22,
+}))``;
+
+
+export const PlusIcon = styled(Plus).attrs(({ theme }) => ({
+  size: 22,
+}))``;
