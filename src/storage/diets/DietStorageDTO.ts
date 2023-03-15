@@ -1,5 +1,5 @@
 
-export type MealProps = {
+export type DietProps = {
   name: string;
   description: string;
   date: string;
@@ -8,7 +8,7 @@ export type MealProps = {
   isInDiet: boolean;
 };
 
-export type MealGroupProps = {
+export type DietGroupProps = {
   date: string;
-  meals: MealProps[];
+  meals: DietProps[];
 };

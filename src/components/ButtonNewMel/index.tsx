@@ -17,6 +17,7 @@ type Props = TouchableOpacityProps & {
 }
 
 export function ButtonNewMel ({title, type = 'primary', icon, ...rest}: Props){
+    
     const IconColor = type === 'primary' ? "#EFF0F0" : "#1B1D1E";
 
     return (

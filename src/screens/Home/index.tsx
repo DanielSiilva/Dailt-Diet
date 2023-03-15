@@ -2,28 +2,23 @@ import { useState } from 'react'
 import {FlatList} from 'react-native'
 
 
+import {Container, Content, NewMeal, Title} from './styles'
 
 import { Header } from '@components/Header'
 import { Percent } from '@components/Percent'
 import { ButtonNewMel } from '@components/ButtonNewMel'
-
-import {Container, Content, NewMeal, Title} from './styles'
+import {EmptyListComponent} from '@components/EmptyListComponent'
+import { Loading } from '@components/Loading'
 import { MelCard } from '@components/MealCard'
 
 
-/* 
-    //Data : data => string (ordenar )
-    // Hora : data => string
-    // Title : string
-    // dentro da dienta: bollean
-*/
+import { DietGroupProps } from '@storage/diets/DietStorageDTO'
 
-/* 
-   Data: [ hora, title, dentro da dienta ]
-*/
+
 
 export function Home (){
-    const [dietList, setDietList] = useState()
+    const [isLoading, setIsLoading] = useState(true)
+    const [dietList, setDietList] = useState<DietGroupProps[]>([])
 
 
     return(
@@ -40,9 +35,27 @@ export function Home (){
                         icon = 'plus'
                     />
                 </NewMeal>
-                {/* FlatList ou SectionList */}
                 
-                <MelCard />
+                {isLoading ? 
+                    (
+                        <FlatList
+                            data={dietList}
+                            keyExtractor={(item) => item.date}
+                            ListEmptyComponent ={()=> (
+                                <EmptyListComponent 
+                                    title='Você ainda não tem refeições cadastradas'
+                                />
+                            )}
+                            renderItem={(item) => (
+                                <>
+                                </>
+                            )}
+                        />
+                    )
+                    : 
+                    <Loading/>
+                }
+            
 
             </Content>
         </Container>
