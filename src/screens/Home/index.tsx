@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {FlatList} from 'react-native'
+import {FlatList, Text} from 'react-native'
 
 
 import {Container, Content, NewMeal, Title} from './styles'
@@ -12,13 +12,16 @@ import { Loading } from '@components/Loading'
 import { MelCard } from '@components/MealCard'
 
 
-import { DietGroupProps } from '@storage/diets/DietStorageDTO'
+import { Data, DietGroupProps } from '@storage/diets/DietStorageDTO'
+
+
+
 
 
 
 export function Home (){
     const [isLoading, setIsLoading] = useState(true)
-    const [dietList, setDietList] = useState<DietGroupProps[]>([])
+    const [dietList, setDietList] = useState<DietGroupProps[]>(Data)
 
 
     return(
@@ -48,6 +51,18 @@ export function Home (){
                             )}
                             renderItem={(item) => (
                                 <>
+                                    <Text>{item.item.date}</Text>
+                                    <FlatList 
+                                        data={item.item.meals}
+                                        keyExtractor ={(meal) => meal.id.toString()}
+                                        renderItem={(meal) => (
+                                            <MelCard 
+                                                name={meal.item.name}
+                                                time={meal.item.time}
+                                                isInDiet={meal.item.isInDiet}
+                                            />
+                                        )}
+                                    />
                                 </>
                             )}
                         />

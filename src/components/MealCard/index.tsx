@@ -2,15 +2,18 @@ import {View, Text} from 'react-native'
 
 import {Container, MelContainer} from './styles'
 
+interface DietProps {
+    name: string;
+    time: string;
+    isInDiet: boolean;
+}
 
-
-export function MelCard (){
+export function MelCard ({time, name, isInDiet}:DietProps){
 
      return (
         <Container>
-            <Text>Ola</Text>
             <View>
-                <Text></Text>
+                <Text>{name}</Text>
             </View>
         </Container>
      )
