@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 import { Home } from '@screens/Home';
+import {CreateNewMeal} from '@screens/CreateNewMeal'
 
 
 const {Navigator, Screen} = createNativeStackNavigator()
@@ -13,6 +14,11 @@ export function AppRoutes(){
             <Screen 
                 name='home'
                 component={Home}
+            />
+
+            <Screen 
+                name='newMel'
+                component={CreateNewMeal}
             />
         </Navigator>
     )
