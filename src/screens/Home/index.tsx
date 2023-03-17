@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import {FlatList, Text} from 'react-native'
 
+import {useNavigation} from "@react-navigation/native"
+
 
 import {Container, Content, NewMeal, Title, TitleMeals} from './styles'
 
@@ -23,6 +25,11 @@ export function Home (){
     const [isLoading, setIsLoading] = useState(true)
     const [dietList, setDietList] = useState<DietGroupProps[]>(Data)
 
+    const navigation= useNavigation()
+
+    function handleNewMel(){
+       navigation.navigate('newMel')
+    }
 
     return(
 
@@ -36,6 +43,7 @@ export function Home (){
                     <ButtonNewMel 
                         title='Nova refeição'
                         icon = 'plus'
+                        onPress={handleNewMel}
                     />
                 </NewMeal>
                 
