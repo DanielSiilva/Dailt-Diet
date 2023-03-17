@@ -12,9 +12,9 @@ export function MelCard ({time, name, isInDiet}:DietProps){
 
      return (
         <Container>
-            <View>
-                <Text>{name}</Text>
-            </View>
+            <Text>{time}</Text>
+            <Text>{name}</Text>
+            <Text>{isInDiet}</Text>
         </Container>
      )
 }

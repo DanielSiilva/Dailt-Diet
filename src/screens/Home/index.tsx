@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {FlatList, Text} from 'react-native'
 
 
-import {Container, Content, NewMeal, Title} from './styles'
+import {Container, Content, NewMeal, Title, TitleMeals} from './styles'
 
 import { Header } from '@components/Header'
 import { Percent } from '@components/Percent'
@@ -51,7 +51,7 @@ export function Home (){
                             )}
                             renderItem={(item) => (
                                 <>
-                                    <Text>{item.item.date}</Text>
+                                    <TitleMeals>{item.item.date}</TitleMeals>
                                     <FlatList 
                                         data={item.item.meals}
                                         keyExtractor ={(meal) => meal.id.toString()}

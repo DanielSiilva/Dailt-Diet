@@ -17,28 +17,36 @@ export type DietGroupProps = {
 
 export const Data: DietGroupProps[] = [
  {
-  date: '20/02/22',
+  date: '20.02.22',
   meals: [
     {
-      date: '20/02/22',
+      date: '20.02.22',
       description: 'Comida',
       id: '1',
-      name: 'Jeijão',
+      name: 'X-Tudo',
       isInDiet: true,
-      time: 'Nome'
+      time: '11:00'
+    },
+    {
+      date: '22.02.22',
+      description: 'Comida',
+      id: '2',
+      name: 'X-Tudo',
+      isInDiet: true,
+      time: '11:00'
     }
   ]
  },
  {
-  date: '21/02/22',
+  date: '21.02.22',
   meals: [
     {
       date: '21/02/22',
       description: 'Comida',
       id: '2',
-      name: 'Jeijão',
+      name: 'Vitamina da banana com leite',
       isInDiet: true,
-      time: 'Nome'
+      time: '20:00'
     }
   ]
  },

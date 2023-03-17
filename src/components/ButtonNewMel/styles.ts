@@ -32,7 +32,7 @@ export const Title = styled.Text`
   text-align: center;
 
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.MD};
+    font-size: ${theme.FONT_SIZE.LG}px;
     color: ${theme.COLORS.WHITE};
     font-family: ${theme.FONT_FAMILY.BOLD};
     margin-left: 10px;

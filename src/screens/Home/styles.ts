@@ -32,3 +32,15 @@ export const Title = styled.Text`
     `}
 
 `
+
+export const TitleMeals = styled.Text`
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    ${({theme}) => css`
+        color: ${theme.COLORS.GRAY_1};
+        font-family: ${theme.FONT_FAMILY.BOLD};
+        font-size: ${theme.FONT_SIZE.LG}px;
+    `}
+
+`
