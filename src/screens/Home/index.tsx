@@ -1,10 +1,7 @@
 import { useState } from 'react'
-import {FlatList, Text} from 'react-native'
+import {FlatList} from 'react-native'
 
 import {useNavigation} from "@react-navigation/native"
-
-
-import {Container, Content, NewMeal, Title, TitleMeals} from './styles'
 
 import { Header } from '@components/Header'
 import { Percent } from '@components/Percent'
@@ -13,11 +10,15 @@ import {EmptyListComponent} from '@components/EmptyListComponent'
 import { Loading } from '@components/Loading'
 import { MelCard } from '@components/MealCard'
 
-
 import { Data, DietGroupProps } from '@storage/diets/DietStorageDTO'
 
-
-
+import {
+    Container, 
+    Content, 
+    NewMeal, 
+    Title, 
+    TitleMeals
+} from './styles'
 
 
 
