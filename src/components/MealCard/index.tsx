@@ -1,6 +1,13 @@
-import {View, Text} from 'react-native'
 
-import {Container, MelContainer} from './styles'
+import {
+    Container, 
+    Name, 
+    Time, 
+    IsDiet, 
+    Content
+} from './styles'
+
+import { Circle } from "phosphor-react-native";
 
 interface DietProps {
     name: string;
@@ -12,9 +19,25 @@ export function MelCard ({time, name, isInDiet}:DietProps){
 
      return (
         <Container>
-            <Text>{time}</Text>
-            <Text>{name}</Text>
-            <Text>{isInDiet}</Text>
+            <Content>
+                <Time>{time}</Time>
+                <Name>{name}</Name>
+            </Content>
+            <IsDiet>
+                {isInDiet ? 
+                    <Circle 
+                        size={14}
+                        weight='fill'
+                        color='#CBE4B4'
+                    /> 
+                    : 
+                    <Circle 
+                        size={14}
+                        weight='fill'
+                        color='#F3BABD'
+                    />
+                }
+            </IsDiet>
         </Container>
      )
 }

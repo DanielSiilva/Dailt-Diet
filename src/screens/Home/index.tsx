@@ -49,6 +49,7 @@ export function Home (){
                                     title='Você ainda não tem refeições cadastradas'
                                 />
                             )}
+                            showsVerticalScrollIndicator={false}
                             renderItem={(item) => (
                                 <>
                                     <TitleMeals>{item.item.date}</TitleMeals>
@@ -62,6 +63,7 @@ export function Home (){
                                                 isInDiet={meal.item.isInDiet}
                                             />
                                         )}
+                    
                                     />
                                 </>
                             )}

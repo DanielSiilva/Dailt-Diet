@@ -24,13 +24,37 @@ export const Data: DietGroupProps[] = [
       description: 'Comida',
       id: '1',
       name: 'X-Tudo',
-      isInDiet: true,
+      isInDiet: false,
       time: '11:00'
     },
     {
       date: '22.02.22',
       description: 'Comida',
       id: '2',
+      name: 'X-Tudo',
+      isInDiet: true,
+      time: '11:00'
+    },
+    {
+      date: '22.02.22',
+      description: 'Comida',
+      id: '3',
+      name: 'X-Tudo',
+      isInDiet: true,
+      time: '11:00'
+    },
+    {
+      date: '22.02.22',
+      description: 'Comida',
+      id: '4',
+      name: 'X-Tudo',
+      isInDiet: true,
+      time: '11:00'
+    },
+    {
+      date: '22.02.22',
+      description: 'Comida',
+      id: '5',
       name: 'X-Tudo',
       isInDiet: true,
       time: '11:00'
@@ -45,7 +69,7 @@ export const Data: DietGroupProps[] = [
       description: 'Comida',
       id: '2',
       name: 'Vitamina da banana com leite',
-      isInDiet: true,
+      isInDiet: false,
       time: '20:00'
     }
   ]
